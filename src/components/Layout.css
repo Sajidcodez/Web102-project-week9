@@ -1,0 +1,13 @@
+.layout {
+  min-height: 100vh;
+  background: transparent; 
+}
+
+.content {
+  padding-top: 90px;
+  min-height: calc(100vh - 70px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}

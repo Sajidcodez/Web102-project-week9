@@ -1,0 +1,221 @@
+.edit-post {
+  padding: 20px;
+  min-height: 100vh;
+  }
+
+.edit-post-container, .auth-container {
+  max-width: 600px;
+  margin: 0 auto;
+     background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+      padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+.edit-post-container h1, .auth-container h1 {
+  color: white;
+    text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.edit-post-container p, .auth-container p {
+  color: rgba(255, 255, 255, 0.9);
+     text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.edit-post-form, .auth-form {
+  display: flex;
+     flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+     display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: white;
+     font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+.auth-form input {
+  padding: 12px 15px;
+  border: none;
+     border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.auth-form input:focus {
+  outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.file-input {
+  padding: 8px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px dashed rgba(52, 152, 219, 0.3) !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+
+.file-input:hover {
+  border-color: rgba(52, 152, 219, 0.6) !important;
+}
+
+.image-preview {
+      margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.image-preview img {
+  width: 100%;
+     height: auto;
+  display: block;
+}
+
+.form-actions, .auth-actions {
+     display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cancel-btn,
+.submit-btn,
+.auth-actions button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+      font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.cancel-btn,
+.auth-actions button:first-child {
+     background: rgba(108, 117, 125, 0.8);
+  color: white;
+}
+
+.cancel-btn:hover,
+.auth-actions button:first-child:hover {
+      background: rgba(108, 117, 125, 1);
+  transform: translateY(-2px);
+}
+
+.submit-btn,
+.auth-actions button:last-child {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled),
+.auth-actions button:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+    .submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+      justify-content: center;
+  height: 60vh;
+  color: white;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+       border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-container button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+         border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    }
+
+     .error-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.auth-container {
+  text-align: center;
+     }
+
+.auth-form input {
+  width: 100%;
+     margin-bottom: 20px;
+    }
+
+@media (max-width: 768px) {
+  .edit-post-container, .auth-container {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  
+  .form-actions, .auth-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cancel-btn,
+  .submit-btn,
+  .auth-actions button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
