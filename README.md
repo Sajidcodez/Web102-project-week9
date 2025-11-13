@@ -6,10 +6,11 @@ This web app: **Debate who's the GOAT of basketball - share hot takes, leave upv
 
 Time spent: **14** hours spent in total
 
+🔗 --> [View Live Website](https://ballhub.netlify.app/)
+
 ## Required Features
 
 The following **required** functionality is completed:
-
 
 - [X] **Web app includes a create form that allows the user to create posts**
   - Form requires users to add a post title
